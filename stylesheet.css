@@ -1,0 +1,429 @@
+/*
+	Elisava Font Type
+*/
+
+/* Regular */
+@font-face {
+font-family: 'Elisava Sans';
+src: url('../fonts/ElisavaSans-Regular.otf') format('opentype');
+font-weight: 400;
+font-style: normal;
+}
+
+/* Italic */
+@font-face {
+font-family: 'Elisava Sans';
+src: url('../fonts/ElisavaSans-RegularItalic.otf') format('opentype');
+font-weight: 400;
+font-style: italic;
+}
+
+/* Bold */
+@font-face {
+font-family: 'Elisava Sans';
+src: url('../fonts/ElisavaSans-Bold.otf') format('opentype');
+font-weight: 700;
+font-style: normal;
+}
+
+/* Bold Italic */
+@font-face {
+font-family: 'Elisava Sans';
+src: url('../fonts/ElisavaSans-BoldItalic.otf') format('opentype');
+font-weight: 700;
+font-style: italic;
+}
+
+/* Apply to entire page */
+html, body {
+  font-size: 18px; /* base */
+  font-family: 'Elisava Sans', sans-serif;
+  background-color: #869B7E;
+}
+
+	
+/* Make all elements include padding in their width/height */
+* {
+  box-sizing: border-box;
+}
+
+#screenpage {
+  display: flex;
+  width: 100%;
+  gap: 24px;
+}
+
+.menuGrid {
+  width: 25%;
+  padding: 20px;
+  border-right: 1px solid #000; /* separates it from content */  
+  position: sticky;
+  top: 0;
+}
+
+.menuGrid p {
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+.menuGrid p:hover {
+  color: white;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+#content {
+  margin-top: 20px;
+  background-color: #FFF8DC;
+  border-radius: 8px;
+  width: 72%;
+  padding: 40px;
+}
+
+#backToStart {
+  width: 100%;
+  font-size: 1.1rem;
+  padding: 8px 16px;
+  border-radius: 50px;
+  background-color: white;
+  cursor: pointer;
+  margin: 4px;
+}
+
+#backToStart:hover {
+    background-color: #FF3503;
+	transition: background-color 0.25s ease;
+}
+
+.chapter {
+	font-style: italic;
+}
+
+.chapter.active {
+    font-weight: bold;
+    color: white;
+}
+
+#page0, #page11 {
+  display: flex;
+  gap: 80px;             /* space between them */
+  margin-top: 20px;
+}
+
+#Edited1 { 
+  width: 100%;
+  max-width: 50vw; 
+  box-shadow:
+    0 4px 6px rgba(0,0,0,0.12),
+    0 15px 25px rgba(0,0,0,0.18);
+  transition: transform 0.2s ease-in-out;
+}
+
+#Edited1:hover, #Edited3:hover {
+	animation: shake 0.4s ease-in-out;
+}
+
+ /* Shake animation keyframes */
+    @keyframes shake {
+        0%   { transform: translate(0, 0) rotate(0deg); }
+        20%  { transform: translate(-2px, 0) rotate(-1deg); }
+        40%  { transform: translate(2px, 0) rotate(1deg); }
+        60%  { transform: translate(-2px, 0) rotate(-1deg); }
+        80%  { transform: translate(2px, 0) rotate(1deg); }
+        100% { transform: translate(0, 0) rotate(0deg); }
+    }
+
+#mdrai {
+	font-size: 1.2rem;
+	font-weight: bold;
+	text-align: center;
+}
+
+#page0text {
+	  max-width: 600px;
+	  margin-top: 0px;
+}
+
+#projectTitle {
+  font-size: clamp(1.8rem, 2vw, 2.8rem);
+  margin-top: 0;
+}
+
+.wave {
+  display: inline-block;
+  animation: gentlePulse 6s ease-in-out infinite;
+}
+
+@keyframes gentlePulse {
+  0% {
+    transform: scale(1);
+    color: #FFD7CD;
+  }
+  50% {
+    transform: scale(1.05);
+    color: #FF8769;
+  }
+  100% {
+    transform: scale(1.05);
+    color: #FF3503;
+  }
+}
+
+#readinPDF, #myname {
+	font-size: 1.5rem;
+}
+
+#date {
+	font-size: 1.2rem;
+}
+
+.buttonstyle {
+  width: 15vw;
+  font-size: 1.1rem;
+  padding: 8px 16px;
+  border-radius: 50px;
+  background-color: white;
+  cursor: pointer;
+  margin: 4px 
+}
+
+.revealed-section {
+  margin: 12px 0 20px 0;
+}
+
+
+.buttonstyle:hover {
+    background-color: #FF3503;
+	transition: background-color 0.25s ease;
+}
+
+.buttonstyle.active3, .buttonstyle.active4, .buttonstyle.active5, .buttonstyle.active6,
+.buttonstyle.active7 {
+    background-color: #FF3503;
+}
+
+#figure1, #figure2, #figure3, #table21, #table22, #table3, #figure4, #figure5, 
+#figure7, #image3, #designer, #designer2, #nrf {
+	max-width: 60vw;
+}
+
+#figure0, #figure6, #formula1, #formula2, #image1, #image4, #pixbrazil, #podcast  {
+	max-width: 40vw;
+}
+
+#image2 {
+	max-width: 30vw;
+}
+
+#figure8 {
+	max-width: 50vw;
+}
+
+.ai-table {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #000;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 40px;
+  background-color: #FFF8DC;
+}
+
+.ai-row {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 3fr;
+  gap: 20px;
+  padding: 16px;
+  border-bottom: 1px solid #ccc;
+}
+
+.ai-header {
+  font-weight: bold;
+  background-color: #E6E6E6;
+}
+
+/* Zebra stripes */
+.ai-row:nth-child(even):not(.ai-header) {
+  background-color: #fafafa;
+}
+
+.ai-row:nth-child(odd):not(.ai-header) {
+  background-color: #E7E1B1;
+}
+
+/* Style the importance column */
+.ai-row div:nth-child(2) {
+  font-style: italic;
+}
+
+/* Better readability for long text */
+.ai-row div:nth-child(3) {
+  line-height: 1.5;
+}
+
+#Edited3 {
+  float: left;
+  max-width: 240px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+
+  box-shadow:
+    0 4px 6px rgba(0,0,0,0.12),
+    0 15px 25px rgba(0,0,0,0.18);
+}
+
+#page11text::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+  #backToTop {
+  display: block;
+  margin: 40px auto 20px auto; /* centered */
+  font-size: 1.1rem;
+  padding: 8px 16px;
+  border-radius: 50px;
+  background-color: white;
+  cursor: pointer;
+}
+
+#backToTop:hover {
+  background-color: #FF3503;
+  transition: background-color 0.25s ease;
+}
+
+
+.footnote-ref {
+  font-size: 0.7em;   /* relative to text, not screen */
+  vertical-align: super;
+}
+
+#footnote1 {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  font-style: italic;
+  font-size: 0.875rem;
+
+}
+
+/* =========================
+   MOBILE RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+
+  /* Stack layout instead of side-by-side */
+  #screenpage {
+    flex-direction: column-reverse;
+    gap: 0;
+  }
+
+  /* Menu becomes top bar */
+  .menuGrid {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #000;
+    position: relative; /* disable sticky */
+  }
+
+  /* Content fills full width */
+  #content {
+    width: 100%;
+    margin-top: 0;
+    padding: 20px;
+  }
+
+  /* Stack intro layout */
+  #page0,
+  #page11 {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  #page0text {
+    text-align: center;   /* centers text inside */
+    margin: 0 auto;       /* centers the block itself */
+  }
+
+  /* Images scale properly */
+  #Edited1,
+  #Edited3 {
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  /* Reduce large figures */
+ #figure1, #figure2, #figure3, #table21, #table22, #table3, #figure4, #figure5, 
+ #figure7, #image3, #designer, #designer2, #nrf,
+ #figure0, #figure6, #formula1, #formula2, #image1, #image4, #pixbrazil, #podcast,
+ #image2,
+ #figure8
+ {
+    max-width: 100%;
+  }
+
+  #figure6, #formula1, #formula2 {
+    max-width: 100%;
+  }
+
+  /* Buttons full width */
+  .buttonstyle {
+    width: 100%;
+    margin: 6px 0;
+	color: black;
+	border: 1px solid #000;
+  }
+
+  #backToStart {
+    width: 100%;
+	color: black;
+	border: 1px solid #000;
+  }
+  
+  #backToTop {
+  	color: black;
+	border: 1px solid #000;
+  }
+
+  /* Typography scaling */
+  #projectTitle {
+    font-size: 1.6rem;
+  }
+
+  #readinPDF,
+  #myname {
+    font-size: 1.2rem;
+  }
+
+  #date {
+    font-size: 1rem;
+  }
+
+  #mdrai {
+    font-size: 1rem;
+  }
+
+  /* Table stacks nicely */
+  .ai-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .ai-header {
+    display: none; /* optional: hide labels */
+  }
+  
+.footnote-ref {
+    font-size: 0.7rem;
+  }
+   
+  #footnote1 {
+    text-align: center;
+	margin-top: 2vh;
+  }
+
+
+}
