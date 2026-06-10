@@ -228,6 +228,7 @@ $(document).ready(function(){
 		    $('#section51').hide();
 			$('#section52').hide();
 			$('#section53').hide();
+		    $('#section54').hide();
 			$('#backToTop').hide();
 		
 		$('#page51').on('click', function(){
@@ -236,6 +237,7 @@ $(document).ready(function(){
             $(this).addClass('active5');
 	        $('#section51').show();
 			$('#section52').hide();
+			$('#section53').hide();
 			$('#section53').hide();
 			$('#backToTop').show();
 				 }); 
@@ -247,6 +249,7 @@ $(document).ready(function(){
 	        $('#section51').hide();
 			$('#section52').show();
 			$('#section53').hide();
+			$('#section54').hide();
 			$('#backToTop').show();
 				 });
 		
@@ -257,6 +260,18 @@ $(document).ready(function(){
 	        $('#section51').hide();
 			$('#section52').hide();
 			$('#section53').show();
+			$('#section54').hide();
+			$('#backToTop').show();
+				 });
+		
+		$('#page54').on('click', function(){
+			scrollToTop();
+			$('.buttonstyle').removeClass('active5');
+            $(this).addClass('active5');
+	        $('#section51').hide();
+			$('#section52').hide();
+			$('#section53').hide();
+			$('#section54').show();
 			$('#backToTop').show();
 				 });
 				 });  
